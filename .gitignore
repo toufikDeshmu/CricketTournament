@@ -1,0 +1,9 @@
+.metadata/
+.settings/
+build/
+bin/
+target/
+*.class
+*.log
+.env
+__pycache__/
