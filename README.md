@@ -34,30 +34,17 @@ This project demonstrates **Advanced Web Technology** concepts using Java Servle
 
 ## 🛠️ Technologies Used
 
-
-
 | Technology | Purpose |
-
 |---|---|
-
 | Java | Application logic and server-side programming |
-
 | Java Servlets | Handle HTTP requests and application operations |
-
 | JSP | Generate dynamic web pages |
-
 | HTML | Structure web pages |
-
 | CSS | Style web pages, where implemented |
-
 | Apache Tomcat 9 | Run the Java web application |
-
 | Gson 2.13.2 | JSON processing |
-
 | Eclipse IDE | Development environment |
-
 | Git and GitHub | Version control and source code hosting |
-
 
 
 ## 🌐 Advanced Web Technology Concepts
