@@ -2,7 +2,11 @@
 
 
 
-A Java-based web application for managing cricket tournaments, teams, players, and matches through a web interface. The project demonstrates Advanced Web Technology concepts using Java Servlets, JSP, HTTP request handling, and server-side web development.
+A Java-based web application for managing cricket tournaments, teams, players, and matches through a web interface.
+
+
+
+This project demonstrates \*\*Advanced Web Technology\*\* concepts using Java Servlets, JSP, HTTP request handling, and server-side web development.
 
 
 
@@ -24,7 +28,7 @@ A Java-based web application for managing cricket tournaments, teams, players, a
 
 \- \*\*Dynamic Web Pages:\*\* Generate web content using JSP.
 
-\- \*\*JSON Processing:\*\* Gson library for JSON-related operations where required.
+\- \*\*JSON Processing:\*\* Use the Gson library for JSON-related operations where required.
 
 
 
@@ -40,17 +44,17 @@ A Java-based web application for managing cricket tournaments, teams, players, a
 
 | Java Servlets | Handle HTTP requests and application operations |
 
-| JSP (JavaServer Pages) | Generate dynamic web pages |
+| JSP | Generate dynamic web pages |
 
 | HTML | Structure web pages |
 
-| CSS | Web page styling, where implemented |
+| CSS | Style web pages, where implemented |
 
-| Apache Tomcat 9 | Java web application server |
+| Apache Tomcat 9 | Run the Java web application |
 
-| Gson 2.13.2 | JSON serialization and deserialization |
+| Gson 2.13.2 | JSON processing |
 
-| Eclipse IDE | Development and project management |
+| Eclipse IDE | Development environment |
 
 | Git and GitHub | Version control and source code hosting |
 
@@ -60,19 +64,19 @@ A Java-based web application for managing cricket tournaments, teams, players, a
 
 
 
-\- \*\*Client–Server Architecture:\*\* The browser communicates with the server to perform application operations.
+\- \*\*Client–Server Architecture:\*\* The browser communicates with the server.
 
-\- \*\*HTTP Request–Response Cycle:\*\* Servlets process incoming web requests and return responses.
+\- \*\*HTTP Request–Response Cycle:\*\* Servlets process incoming requests and return responses.
 
-\- \*\*Server-Side Rendering:\*\* JSP generates dynamic HTML content on the server.
+\- \*\*Server-Side Rendering:\*\* JSP generates dynamic HTML content.
 
-\- \*\*CRUD Operations:\*\* Create, Read, Update, and Delete operations for teams, players, and matches.
+\- \*\*CRUD Operations:\*\* Create, Read, Update, and Delete teams, players, and matches.
 
-\- \*\*Form Handling:\*\* Process user-submitted information through web forms.
+\- \*\*Form Handling:\*\* Process information submitted through web forms.
 
-\- \*\*Session-Based Authentication:\*\* Login and logout workflows, subject to the application's session implementation.
+\- \*\*Authentication:\*\* Implement login and logout workflows.
 
-\- \*\*Java Web Application Deployment:\*\* Run a web application on an Apache Tomcat servlet container.
+\- \*\*Web Application Deployment:\*\* Run the application using Apache Tomcat.
 
 \- \*\*JSON Processing:\*\* Use Gson where JSON conversion is required.
 
@@ -82,23 +86,17 @@ A Java-based web application for managing cricket tournaments, teams, players, a
 
 
 
-The CricketTournament Management System follows the \*\*Model–View–Controller (MVC) architectural pattern\*\* to organize application components and separate the user interface from request handling and data representation.
+The application follows an \*\*MVC-style separation\*\* of data-related classes, user interface pages, and request-handling components.
 
 
 
-\### MVC Components in This Project
+\### 1. Model — Java Classes
 
 
 
-\*\*1. Model — Java Classes\*\*
+The Model represents application data.
 
 
-
-The Model represents the application's data and related logic.
-
-
-
-Files used:
 
 \- `Match.java` — Represents cricket match information.
 
@@ -110,15 +108,13 @@ Files used:
 
 
 
-\*\*2. View — JSP Pages\*\*
+\### 2. View — JSP Pages
 
 
 
-The View presents information to users through dynamic web pages.
+The View displays information and provides the user interface.
 
 
-
-Examples:
 
 \- `index.jsp` — Application entry page.
 
@@ -136,27 +132,25 @@ Examples:
 
 
 
-\*\*3. Controller — Java Servlets\*\*
+\### 3. Controller — Java Servlets
 
 
 
-The Controller receives HTTP requests, processes user actions, and coordinates application operations.
+The Controller receives HTTP requests and processes user actions.
 
 
 
-Examples:
+\- `LoginServlet.java` and `LogoutServlet.java` — Handle login and logout requests.
 
-\- `LoginServlet.java` and `LogoutServlet.java` — Handle authentication workflows.
+\- `AddTeamServlet.java`, `EditTeamServlet.java`, and `DeleteTeamServlet.java` — Handle team-management operations.
 
-\- `AddTeamServlet.java`, `EditTeamServlet.java`, and `DeleteTeamServlet.java` — Handle team-management requests.
+\- `AddPlayerServlet.java`, `EditPlayerServlet.java`, and `DeletePlayerServlet.java` — Handle player-management operations.
 
-\- `AddPlayerServlet.java`, `EditPlayerServlet.java`, and `DeletePlayerServlet.java` — Handle player-management requests.
-
-\- `AddMatchServlet.java`, `EditMatchServlet.java`, and `DeleteMatchServlet.java` — Handle match-management requests.
+\- `AddMatchServlet.java`, `EditMatchServlet.java`, and `DeleteMatchServlet.java` — Handle match-management operations.
 
 
 
-\### How MVC Works in the Application
+\### How MVC Works
 
 
 
@@ -164,13 +158,13 @@ For example, when an administrator adds a team:
 
 
 
-1\. \*\*View:\*\* The user enters team information through a JSP form.
+1\. \*\*View:\*\* The user enters team information in a JSP form.
 
-2\. \*\*Controller:\*\* The corresponding Servlet receives the HTTP form submission.
+2\. \*\*Controller:\*\* The corresponding Servlet receives the submitted form data.
 
-3\. \*\*Model / Data Layer:\*\* The application processes the team information using the relevant Java classes and data-storage operations.
+3\. \*\*Model/Data Layer:\*\* The application processes the information using its Java classes and data-handling operations.
 
-4\. \*\*Response:\*\* The application returns or forwards to the appropriate JSP page to display the result.
+4\. \*\*Response:\*\* The application returns the appropriate response or JSP page.
 
 
 
@@ -178,21 +172,13 @@ For example, when an administrator adds a team:
 
 
 
-\- Separation of presentation, request handling, and data-related responsibilities.
+\- \*\*Separation of concerns:\*\* Organizes presentation, request handling, and data-related responsibilities.
 
-\- Better organization and maintainability of Java web application code.
+\- \*\*Maintainability:\*\* Makes the code easier to understand and modify.
 
-\- Easier debugging and modification of individual components.
+\- \*\*Organization:\*\* Separates JSP pages from Servlet request-handling code.
 
-\- Reusable Java classes and JSP views.
-
-\- Clearer application structure for implementing CRUD operations.
-
-
-
-This architecture demonstrates the application of MVC concepts in Java Servlet and JSP-based Advanced Web Technology development.
-
-
+\- \*\*Reusability:\*\* Gives Java classes and JSP pages distinct responsibilities.
 
 
 
@@ -200,7 +186,7 @@ This architecture demonstrates the application of MVC concepts in Java Servlet a
 
 
 
-Install the following software before running the application:
+Install the following software:
 
 
 
@@ -210,7 +196,7 @@ Install the following software before running the application:
 
 \- Apache Tomcat 9
 
-\- Git (optional, for source code management)
+\- Git (optional)
 
 
 
@@ -218,23 +204,23 @@ Install the following software before running the application:
 
 
 
-1\. Clone or download this repository.
+1\. Clone or download the repository.
 
 2\. Open Eclipse.
 
 3\. Select \*\*File → Import → General → Existing Projects into Workspace\*\*.
 
-4\. Select the downloaded `CricketTournament` project folder.
+4\. Select the `CricketTournament` project folder.
 
-5\. Configure Apache Tomcat 9 in Eclipse under \*\*Window → Show View → Servers\*\*.
+5\. Configure Apache Tomcat 9 in Eclipse.
 
-6\. Configure the project to use the Tomcat 9 runtime.
+6\. Set the project runtime to Tomcat 9.
 
 7\. Add the project to the Tomcat server.
 
 8\. Start the server.
 
-9\. Open the application in your browser using the context path assigned by Eclipse, for example:
+9\. Open the application using the context path assigned by Eclipse, for example:
 
 
 
@@ -242,7 +228,7 @@ Install the following software before running the application:
 
 
 
-&#x20;  If the project uses a different context path, use that path instead.
+&#x20;  Use the actual context path if it differs.
 
 
 
@@ -318,7 +304,7 @@ CricketTournament/
 
 
 
-The objective of this project is to develop a web-based cricket tournament management system while applying Advanced Web Technology concepts, including Java Servlet processing, JSP-based dynamic content, HTTP communication, form handling, and CRUD operations.
+To develop a web-based cricket tournament management system while applying Advanced Web Technology concepts such as Java Servlet processing, JSP-based dynamic content, HTTP communication, form handling, and CRUD operations.
 
 
 
@@ -330,7 +316,7 @@ The objective of this project is to develop a web-based cricket tournament manag
 
 
 
-B.Tech – Artificial Intelligence and Machine Learning
+B.Tech — Artificial Intelligence and Machine Learning
 
 
 
@@ -342,7 +328,5 @@ MGM University
 
 
 
-This project is intended for educational and academic purposes. Add a specific open-source license if you wish to define permissions for reuse and distribution.
-
-
+This project is intended for educational and academic purposes. Add an open-source license if you want to specify permissions for reuse and distribution.
 
